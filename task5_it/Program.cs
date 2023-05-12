@@ -8,12 +8,15 @@ namespace Program
     {
         public static void Main(string[] args)
         {
-            Costume c = new Costume("Tshirt", 50);
-            c.addLabel("StoneIsland");
-            c.WearOut(8);
-            c.WearOut(8);
-            c.WearOut(8);
-            Console.WriteLine(c.ToString());
+            List<IFiber> list = new List<IFiber>();
+            list.Add(new Costume("Tshirt", 50));
+            list.Add(new Costume("Pants", 60));
+            list.Add(new Costume("Sweater", 30));
+
+            foreach (IFiber item in list)
+            {
+                Console.WriteLine(item.ToString());
+            }
         }
     }
 }

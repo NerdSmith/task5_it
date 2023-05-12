@@ -39,5 +39,10 @@ namespace task5_it
         {
             CurrDurability -= (int)(1 - ((double)Durability / 1000));
         }
+
+        public override string? ToString()
+        {
+            return $"{Name}:: durability: {Durability} ({CurrDurability}), style: {(Style != null? Style: "None")}, price: {(Price != null ? Price : "None")}";
+        }
     }
 }
