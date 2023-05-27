@@ -1,4 +1,6 @@
-﻿namespace task5_it
+﻿using System.Diagnostics;
+
+namespace task5_it
 {
     internal class Dress : ClothesAbs
     {
@@ -33,6 +35,11 @@
             {
                 throw new Exception("Dress is too short");
             }
+        }
+
+        public override string? ToString()
+        {
+            return $"{Name}:: durability: {Durability} ({CurrDurability}), style: {(Length != 0 ? Length : "Not set")}, hasSleeves: {(HasSleeves ? "Yes" : "No")}";
         }
     }
 }

@@ -31,7 +31,7 @@ namespace task5_it
         {
             for (int i = 0; i < times; i++)
             {
-                CurrDurability -=  (int)(10 * (1 - ((double)Durability / 100)));
+                CurrDurability -= (int)(10 * (1 - ((double)Durability / 100)));
             }
         }
 
@@ -42,7 +42,7 @@ namespace task5_it
 
         public override string? ToString()
         {
-            return $"{Name}:: durability: {Durability} ({CurrDurability}), style: {(Style != null? Style: "None")}, price: {(Price != null ? Price : "None")}";
+            return $"{Name}:: durability: {Durability} ({CurrDurability}), style: {(Style != null ? Style : "None")}, price: {(Price != null ? Price : "None")}";
         }
     }
 }

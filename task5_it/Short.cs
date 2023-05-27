@@ -1,4 +1,6 @@
 ﻿
+using System.Diagnostics;
+
 namespace task5_it
 {
     internal class Short : ClothesAbs
@@ -30,6 +32,11 @@ namespace task5_it
         public void ChangeColor(string newColor)
         {
             Color = $"{Color}({newColor})";
+        }
+
+        public override string? ToString()
+        {
+            return $"{Name}:: durability: {Durability} ({CurrDurability}), color: {(Color != null ? Color : "None")}, hasPockets: {(HasPockets ? "Yes" : "No")}";
         }
     }
 }
