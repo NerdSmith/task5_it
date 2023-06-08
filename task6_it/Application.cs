@@ -73,7 +73,7 @@ namespace task6_it
 
             for (int i = 0; i < parameters.Length; i++)
             {
-                string userInput = Interaction.InputBox($"Введите значение для параметра {parameters[i].Name}:");
+                string userInput = Interaction.InputBox($"Enter parameter {parameters[i].Name}:");
                 arguments[i] = Convert.ChangeType(userInput, parameters[i].ParameterType);
             }
 
